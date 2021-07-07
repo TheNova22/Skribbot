@@ -16,11 +16,15 @@ Skribbot is a drawing bot created using python for games played on skribbl.
 - After cloning the repo, make sure you install google_image_download and pyautogui by running the following:</br>
 ```pip install google_images_download```</br>
 ```pip install pyautogui```
-- Make sure to set ```whitePosX``` and ```whitePosY``` as the constraints of the white color box in skribbl as the position of it might vary with display screen size. (<em>Line 7</em> in the py file)
 
 ## Running
-Call the python program from terminal and let the program draw on skribbl's canvas.
+- Call the python program from terminal at the turn you are supposed to draw on skribbl.</br>
+- Move your mouse on top of the white color block's center and click on enter so that it records where the color palette is present in your screen. You can set the values of ```whitePosX``` and ```whitePosY``` (<em>Line 10</em> in the py file) so that you can quickly proceed with the program rather than moving the cursor to white block every time. </br>
+- Move your mouse to the top left corner of canvas so that it will be used as a start point to draw the image. </br>
+- Input the word assigned to you. </br>
+- Wait and let Skribbot do its magic
+
 
 ### Note
-- The program automatically deletes the images downloaded after drawing them. You can disable it by removing the last line in the py file i.e. <em>Line 91</em>.
+- The program automatically deletes the images downloaded after drawing them. You can disable it by removing the last line in the py file i.e. <em>Line 120</em>.
 - This program doesn't intend to use copyrighted materials/images via downloading the images from google, but rather is intended to be educational and a medium for users to have fun in playing skribbl and using python.
