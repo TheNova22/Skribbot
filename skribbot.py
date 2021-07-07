@@ -29,7 +29,14 @@ def minColPicker(r,g,b):
             row = 1
     return whitePosX + (index * 24), whitePosY if row == 0 else whitePosY + 24
         
-
+print("\nMove the mouse to the white color block's center and click on enter")
+print('Type n to use default coordinates')
+answer = input()
+if answer != 'n' : whitePosX,whitePosY = pyautogui.position()
+print(whitePosX,whitePosY)
+print('\nMove the mouse to the top left corner of canvas and click on enter')
+input()
+currentX, currentY = pyautogui.position()
 
 for col in colorsRow1:
     pals.append(col[0])
@@ -50,6 +57,7 @@ palette.putpalette(pals)
 
 
 response = google_images_download.googleimagesdownload()
+print('\nEnter the title of the drawing')
 word = input()
 arguments = {"keywords": word, "limit":1, "print_urls":False, 'safe_search':True, 'exact_size':'200,200', 'type': 'clipart', 'format': 'jpg','no_directory' : True}  #creating list of arguments
 paths = response.download(arguments)
@@ -61,7 +69,6 @@ imageLoc = paths[0][word]
 
 
 ct = 0
-currentX, currentY = pyautogui.position()
 
 
 pyautogui.PAUSE = 0
